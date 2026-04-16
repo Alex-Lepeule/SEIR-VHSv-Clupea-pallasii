@@ -13,7 +13,6 @@
 
 library(deSolve)
 library(ggplot2)
-library(truncnorm)
 library(gridExtra)
 library(grid)
 library(lattice)
