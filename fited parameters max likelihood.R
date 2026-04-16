@@ -79,9 +79,6 @@ sigmaPlot <- ggplot(sigmaE, aes(x = temp))+
         axis.title=element_text(size=100,face="bold"),
         title =  element_text(size = 100))
 
-# linear regression and fitted Rsquare
-summary(lm(c(0.6543,0.9284,0.9223)~c(8.8,11.2,14.7)))
-
 #############################################################################################################################
 ############################################### Mortality rate ##############################################################
 #############################################################################################################################
@@ -114,9 +111,6 @@ alphaPlot <- ggplot(alphaE, aes(x = temp))+
         axis.title=element_text(size=100,face="bold"),
         title =  element_text(size = 100))
 
-# linear regression and fitted Rsquare
-summary(lm(c(0.2060,0.1815,0.0680)~c(8.8,11.2,14.7)))
-
 #############################################################################################################################
 ############################################### Recovery rate ###############################################################
 #############################################################################################################################
@@ -148,8 +142,6 @@ gammaPlot <- ggplot(gammaE, aes(x = temp))+
   theme(axis.text=element_text(size=100),
         axis.title=element_text(size=100,face="bold"),
         title =  element_text(size = 100))
-# linear regression and fitted Rsquare
-summary(lm(c(0.0472,0.2303,0.3984)~c(8.8,11.2,14.7)))
 
 #############################################################################################################################
 ############################################### Infected shedding rate ######################################################
@@ -184,8 +176,6 @@ cPlot <- ggplot(cE, aes(x = temp))+
   theme(axis.text=element_text(size=100),
         axis.title=element_text(size=100,face="bold"),
         title =  element_text(size = 100))
-# linear regression and fitted Rsquare
-summary(lm(c(7.8,6.3,5.4)~c(8.8,11.2,14.7)))
 
 #############################################################################################################################
 ############################################### Inactivation rate ###########################################################
@@ -218,8 +208,6 @@ rPlot <- ggplot(rE, aes(x = temp))+
   theme(axis.text=element_text(size=100),
         axis.title=element_text(size=100,face="bold"), 
         title =  element_text(size = 100))
-# linear regression and fitted Rsquare
-summary(lm(c(0.13,0.16,0.24)~c(8.8,11.2,14.7)))
 
 #############################################################################################################################
 ############################################### Carrier shedding rate #######################################################
@@ -264,12 +252,3 @@ png(filename = "Param.png", height = 4500, width = 6400, res = 100 )# name and r
              (gammaPlot|fPlot)/
              (cPlot|rPlot) 
 dev.off() #send the plot on the chosen working directory
-
-#beta
-0.0551
-#sigma
-summary(lm(c(0.6543,0.9284,0.9223)~c(8.8,11.2,14.7)))
-#gamma
-summary(lm(c(0.0472,0.2303,0.3984)~c(8.8,11.2,14.7)))
-#alpha
-summary(lm(c(0.2060,0.1815,0.0680)~c(8.8,11.2,14.7)))
