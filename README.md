@@ -1,5 +1,7 @@
 Data and code related to the article “Modeling temperature-dependant herd immunity and survival of Pacific herring exposed to viral haemorrhagic septicemia virus” and submitted in Ecosphere 2025
+
 Data:
+
 1_description_project.txt: Background explanation of the study and description of the model and how to exploit files and codes linked in the github repository.
 
 2_cumulative mortality.csv: file containing the cumulative mortality data from Hershebrger et al 2013 (Hershberger, P. K., M. K. Purcell, L. M. Hart, et al. 2013. ‘Influence of Temperature on Viral Hemorrhagic Septicemia (Genogroup IVa) in Pacific Herring, Clupea Pallasii Valenciennes’. Journal of Experimental Marine Biology and Ecology 444 (June): 81–86. https://doi.org/10.1016/j.jembe.2013.03.006.) used as validation data for the maximum likelihood model. 
@@ -9,7 +11,9 @@ Lower SD 8C = lower limit of the standard deviation for the challenges at 8°C
 Upper SD 8C = Upper limit of the standard deviation for the challenges at 8°C.
 Each group of three follows the same logic for the other challenged temperatures 11°C and 14°C  
 This file is loaded in the 3_param_estimates.R
+
 Code:
+
 3_param_estimates.R: in this code we used the validation data from Hershberger et al. 2013 to best fit the model's dynamic for each temperature to the observed data using a maximum likelihood model.
 
 4_fited_parameters_max_likelihood.R: Graphical representation of the variation of the  temperature dependent parameters after fitting to validation data.
